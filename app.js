@@ -8,8 +8,9 @@ function currentLang(){
   return document.documentElement.getAttribute("lang") === "en" ? "en" : "es";
 }
 function t(key){
-  const dict = (window.translations && window.translations[currentLang()]) || {};
-  return dict[key] !== undefined ? dict[key] : key;
+  const table = window.translations || (typeof translations !== "undefined" ? translations : null);
+  const dict = (table && (table[currentLang()] || table.es)) || {};
+  return Object.prototype.hasOwnProperty.call(dict,key) ? dict[key] : key;
 }
 
 const toThumb = path => path.replace("assets/", "assets/thumbs/");

@@ -1,10 +1,10 @@
-/* i18n.js — Bilingual (ES/EN) text dictionary and language engine for
-   Grupo de Desarrollo Urbano S.A. Spanish values mirror the defaults
-   already written in index.html so the dictionary stays the single
-   source of truth once JS has hydrated the page. */
+/* i18n.js — Grupo de Desarrollo Urbano S.A.
+   Bilingual ES/EN dictionary and language engine. v20 fixes the language
+   switcher by restoring the complete English dictionary, restoring Spanish
+   rotating-area copy, and exposing translations to app.js. */
 
 const translations = {
-  es: {
+  "es": {
     "a11y.skip": "Saltar al contenido",
     "nav.nosotros": "Nosotros",
     "nav.servicios": "Servicios",
@@ -13,7 +13,6 @@ const translations = {
     "nav.preguntas": "Preguntas",
     "nav.contacto": "Contacto",
     "nav.cta": "Cotización sin costo",
-
     "hero.eyebrow": "Urbanismo · Infraestructura · Ingeniería",
     "hero.h1": "Planificamos territorio.<br><span>Construimos desarrollo.</span>",
     "hero.lead": "Soluciones integrales para proyectos urbanos, residenciales y comerciales, desde la planificación hasta la ejecución y supervisión.",
@@ -31,26 +30,25 @@ const translations = {
     "chip.supervision": "Supervisión y gerencia",
     "chip.ingenieria": "Ingeniería civil y consultoría",
     "chip.ambiental": "Gestión ambiental",
-
     "nosotros.eyebrow": "Quiénes somos",
     "nosotros.h2": "Conocimiento técnico, creatividad y ejecución para cada proyecto.",
     "nosotros.lead": "Somos un grupo multidisciplinario de profesionales, con conocimiento técnico y creatividad, desarrollando proyectos que responden a la visión y necesidad de cada cliente.",
     "nosotros.p1": "Trabajamos en edificaciones residenciales, comerciales, industriales e institucionales. Realizamos obra civil en sus distintas ramas y somos especialistas en acabados y remodelaciones, acompañando desde la concepción del diseño y la planificación de recursos y plazos hasta la ejecución física de la obra y sus acabados finales.",
-    "nosotros.v1": "Diseño", "nosotros.v2": "Planificación", "nosotros.v3": "Ejecución", "nosotros.v4": "Calidad",
+    "nosotros.v1": "Diseño",
+    "nosotros.v2": "Planificación",
+    "nosotros.v3": "Ejecución",
+    "nosotros.v4": "Calidad",
     "nosotros.expEyebrow": "Lo que hacemos",
     "nosotros.expText": "Del diseño y la planificación a la ejecución y los acabados.",
     "equipo.kicker": "Identidad de marca",
     "equipo.text": "Personal en obra con uniforme corporativo de Grupo de Desarrollo Urbano, reforzando identidad, orden y presentación profesional.",
-
     "presentacion.eyebrow": "Presentación corporativa",
     "presentacion.h3": "Conozca nuestros servicios, capacidades y proyectos.",
     "presentacion.p": "Consulte la presentación institucional de Grupo de Desarrollo Urbano S.A. con información de la empresa, áreas de servicio y proyectos realizados.",
     "presentacion.ver": "Ver presentación PDF",
     "presentacion.descargar": "Descargar presentación · 3 MB",
-
     "slogan.main": "Construimos ideas que se transforman en proyectos sólidos, sostenibles y exitosos.",
     "slogan.sub": "Construimos sueños que perduren: proyectos exitosos para el futuro.",
-
     "servicios.eyebrow": "Capacidades",
     "servicios.h2": "Soluciones integrales para cada etapa del proyecto.",
     "servicios.lead": "Servicios coordinados para desarrollo urbano, construcción, adecuaciones, supervisión y soporte técnico especializado.",
@@ -76,15 +74,21 @@ const translations = {
     "servicios.s10.text": "Desarrollo de estudios, diseños y soluciones de ingeniería estructural, hidráulica, sanitaria, eléctrica y ambiental, adaptadas a los requerimientos específicos de cada proyecto.",
     "servicios.s11.title": "Gestión ambiental y sostenibilidad",
     "servicios.s11.text": "Elaboración de estudios de impacto ambiental, planes de mitigación, cumplimiento normativo y soluciones sostenibles para promover proyectos responsables con su entorno.",
-
     "especialidades.eyebrow": "Ejecución en campo",
     "especialidades.h2": "Trabajos realizados por especialidad.",
     "especialidades.lead": "Una muestra de instalaciones eléctricas, tabla yeso, herrería, carpintería, jardinización y rotulación ejecutadas en distintos proyectos.",
-    "filter.electricidad": "Electricidad", "filter.tablayeso": "Tabla yeso", "filter.herreria": "Herrería",
-    "filter.carpinteria": "Carpintería", "filter.jardinizacion": "Jardinización", "filter.rotulacion": "Rotulación",
-    "filter.todos": "Todos", "filter.urbanismo": "Urbanismo", "filter.residencial": "Residencial",
-    "filter.comercial": "Comercial", "filter.institucional": "Institucional", "filter.especialidades": "Especialidades",
-
+    "filter.electricidad": "Electricidad",
+    "filter.tablayeso": "Tabla yeso",
+    "filter.herreria": "Herrería",
+    "filter.carpinteria": "Carpintería",
+    "filter.jardinizacion": "Jardinización",
+    "filter.rotulacion": "Rotulación",
+    "filter.todos": "Todos",
+    "filter.urbanismo": "Urbanismo",
+    "filter.residencial": "Residencial",
+    "filter.comercial": "Comercial",
+    "filter.institucional": "Institucional",
+    "filter.especialidades": "Especialidades",
     "jardinizacionArea.eyebrow": "Área especializada",
     "jardinizacionArea.h2": "Jardinización que transforma y mantiene espacios vivos.",
     "jardinizacionArea.lead": "Desarrollamos paisajismo, mantenimiento de áreas verdes, poda ornamental, césped, jardinería residencial y entornos recreativos que elevan la imagen y el valor de cada proyecto.",
@@ -99,7 +103,6 @@ const translations = {
     "jardinizacionArea.cap2": "Paisajismo integrado a áreas recreativas",
     "jardinizacionArea.cap3": "Ambientes tropicales y jardines residenciales",
     "jardinizacionArea.cap4": "Césped, bordes verdes y mantenimiento continuo",
-
     "tablayesoArea.eyebrow": "Área especializada",
     "tablayesoArea.h2": "Tabla yeso con diseño, ejecución y acabados.",
     "tablayesoArea.lead": "Desarrollamos muros, cielos falsos, nichos, iluminación integrada y acabados interiores en tabla yeso para espacios residenciales, comerciales e institucionales.",
@@ -116,7 +119,6 @@ const translations = {
     "tablayesoArea.cap4": "Instalación y orden en obra",
     "tablayesoArea.cap5": "Trabajo técnico en sistema liviano",
     "tablayesoArea.cap6": "Ambientes terminados con iluminación integrada",
-
     "carpinteriaArea.eyebrow": "Área especializada",
     "carpinteriaArea.h2": "Carpintería a medida para espacios con identidad.",
     "carpinteriaArea.lead": "Diseñamos y ejecutamos cocinas, mesas, mobiliario, panelados, revestimientos y piezas especiales en madera para proyectos residenciales, corporativos e institucionales.",
@@ -131,7 +133,6 @@ const translations = {
     "carpinteriaArea.cap2": "Comedores y piezas residenciales",
     "carpinteriaArea.cap3": "Panelados y muebles de entretenimiento",
     "carpinteriaArea.cap4": "Mobiliario para espacios corporativos",
-
     "rotulacionArea.eyebrow": "Área especializada",
     "rotulacionArea.h2": "Rotulación que proyecta identidad y presencia comercial.",
     "rotulacionArea.lead": "Desarrollamos soluciones de rotulación, señalización y letras corpóreas para fachadas, plazas comerciales, interiores y espacios institucionales, con acabados luminosos y no luminosos.",
@@ -147,12 +148,10 @@ const translations = {
     "rotulacionArea.cap3": "Instalación de fachada comercial",
     "rotulacionArea.cap4": "Directorios y señalización para plaza comercial",
     "rotulacionArea.cap5": "Fachadas en ACM y letras corpóreas",
-
     "proyectos.eyebrow": "Portafolio",
     "proyectos.h2": "Proyectos que respaldan nuestra experiencia.",
     "proyectos.lead": "Proyectos de urbanismo, infraestructura, vivienda, obra institucional, acabados y especialidades técnicas. Construimos sueños que perduren: proyectos exitosos para el futuro.",
     "proyectos.note": "Seleccione un proyecto para ver su ficha",
-
     "urbanismo.eyebrow": "Urbanismo y desarrollo",
     "urbanismo.h2": "Del territorio a un proyecto viable, ordenado y sostenible.",
     "urbanismo.p": "Integramos estudios de uso de suelo, planes maestros, ordenamiento territorial, diseño urbano e infraestructura para convertir el territorio en proyectos funcionales y ejecutables.",
@@ -162,23 +161,27 @@ const translations = {
     "urbanismo.l4": "Gestión ambiental y sostenibilidad",
     "urbanismo.badgeEyebrow": "Visión",
     "urbanismo.badgeText": "Planificar con criterio.<br>Construir con propósito.",
-
     "proceso.eyebrow": "Metodología",
     "proceso.h2": "Un proceso claro de principio a fin.",
     "proceso.lead": "Organización y seguimiento técnico para mantener alcance, tiempos, coordinación y calidad durante el proyecto.",
-    "proceso.p1.title": "Diagnóstico", "proceso.p1.text": "Necesidades, condiciones, alcance, objetivos y requerimientos del proyecto.",
-    "proceso.p2.title": "Planificación", "proceso.p2.text": "Propuesta técnica, etapas, especialidades, tiempos y estrategia de ejecución.",
-    "proceso.p3.title": "Ejecución y supervisión", "proceso.p3.text": "Coordinación en campo, control de avance y seguimiento de actividades.",
-    "proceso.p4.title": "Entrega", "proceso.p4.text": "Cierre, revisión y acompañamiento según el alcance contratado.",
-
+    "proceso.p1.title": "Diagnóstico",
+    "proceso.p1.text": "Necesidades, condiciones, alcance, objetivos y requerimientos del proyecto.",
+    "proceso.p2.title": "Planificación",
+    "proceso.p2.text": "Propuesta técnica, etapas, especialidades, tiempos y estrategia de ejecución.",
+    "proceso.p3.title": "Ejecución y supervisión",
+    "proceso.p3.text": "Coordinación en campo, control de avance y seguimiento de actividades.",
+    "proceso.p4.title": "Entrega",
+    "proceso.p4.text": "Cierre, revisión y acompañamiento según el alcance contratado.",
     "credenciales.eyebrow": "Respaldo técnico",
     "credenciales.h2": "Coordinación multidisciplinaria para decisiones mejor sustentadas.",
     "credenciales.p": "Integramos especialidades técnicas para que planificación, ejecución y supervisión mantengan una misma línea de trabajo.",
-    "credenciales.c1.title": "Ingeniería civil y consultoría", "credenciales.c1.text": "Diseño estructural, hidráulico, sanitario, eléctrico y ambiental.",
-    "credenciales.c2.title": "Supervisión y gerencia", "credenciales.c2.text": "Control de calidad, administración de proyectos (PM) y seguimiento técnico y financiero.",
-    "credenciales.c3.title": "Gestión ambiental", "credenciales.c3.text": "Estudios de impacto ambiental, mitigación, cumplimiento normativo y soluciones verdes.",
+    "credenciales.c1.title": "Ingeniería civil y consultoría",
+    "credenciales.c1.text": "Diseño estructural, hidráulico, sanitario, eléctrico y ambiental.",
+    "credenciales.c2.title": "Supervisión y gerencia",
+    "credenciales.c2.text": "Control de calidad, administración de proyectos (PM) y seguimiento técnico y financiero.",
+    "credenciales.c3.title": "Gestión ambiental",
+    "credenciales.c3.text": "Estudios de impacto ambiental, mitigación, cumplimiento normativo y soluciones verdes.",
     "credenciales.link": "Solicitar información técnica →",
-
     "faq.eyebrow": "Preguntas frecuentes",
     "faq.h2": "Lo que más nos preguntan sobre nuestros servicios.",
     "faq.q1": "¿Qué servicios ofrece Grupo de Desarrollo Urbano?",
@@ -191,17 +194,19 @@ const translations = {
     "faq.a4": "Sí. Hemos desarrollado vivienda, urbanizaciones, locales comerciales y obras institucionales, incluyendo proyectos en la Universidad de San Carlos de Guatemala, desde la planificación hasta la ejecución y los acabados.",
     "faq.q5": "¿Ofrecen supervisión de obra para proyectos de terceros?",
     "faq.a5": "Sí, ofrecemos supervisión y gerencia de proyectos con control de calidad y seguimiento técnico, financiero y de ejecución.",
-
     "contacto.eyebrow": "Contacto",
     "contacto.h2": "Hablemos de su próximo proyecto.",
     "contacto.lead": "Solicite una cotización sin costo. Nuestro objetivo es responder su solicitud en un plazo de 24 horas hábiles.",
     "contacto.llamar": "Llamar 2360-3424",
-    "contacto.direccion": "Dirección", "contacto.correo": "Correo",
-    "contacto.horario": "Horario", "contacto.horarioTexto": "Lunes a viernes · 8:30 a.m. a 5:30 p.m.",
-
+    "contacto.direccion": "Dirección",
+    "contacto.correo": "Correo",
+    "contacto.horario": "Horario",
+    "contacto.horarioTexto": "Lunes a viernes · 8:30 a.m. a 5:30 p.m.",
     "form.eyebrow": "Solicitar información",
     "form.h3": "Cuéntenos qué necesita.",
-    "form.nombre": "Nombre", "form.telefono": "Teléfono / WhatsApp", "form.tipo": "Tipo de proyecto",
+    "form.nombre": "Nombre",
+    "form.telefono": "Teléfono / WhatsApp",
+    "form.tipo": "Tipo de proyecto",
     "form.opcion0": "Seleccione una opción",
     "form.opcion1": "Urbanismo y planificación territorial",
     "form.opcion2": "Infraestructura y construcción",
@@ -211,63 +216,355 @@ const translations = {
     "form.opcion6": "Supervisión / gerencia",
     "form.opcion7": "Consultoría técnica",
     "form.opcion8": "Otro",
-    "form.mensaje": "Mensaje", "form.mensajePlaceholder": "Describa brevemente el proyecto",
+    "form.mensaje": "Mensaje",
+    "form.mensajePlaceholder": "Describa brevemente el proyecto",
     "form.enviar": "Enviar solicitud",
     "form.enviarWhatsapp": "O envíelo directo por WhatsApp",
     "form.nota": "Formulario disponible 24/7 · Respuesta objetivo en 24 horas hábiles.",
-
     "closing.eyebrow": "Siguiente paso",
     "closing.h2": "Convirtamos su proyecto en un plan claro y ejecutable.",
-    "closing.cta1": "Cotización sin costo", "closing.cta2": "Hablar por WhatsApp",
-
+    "closing.cta1": "Cotización sin costo",
+    "closing.cta2": "Hablar por WhatsApp",
     "footer.tagline": "En construcción somos su solución. Urbanismo, infraestructura e ingeniería con visión integral de desarrollo.",
-    "footer.navegacion": "Navegación", "footer.presentacion": "Presentación", "footer.contacto": "Contacto",
+    "footer.navegacion": "Navegación",
+    "footer.presentacion": "Presentación",
+    "footer.contacto": "Contacto",
     "footer.privacidadTitulo": "Aviso de privacidad",
     "footer.privacidadTexto": "Los datos enviados mediante el formulario se utilizan únicamente para responder solicitudes comerciales y dar seguimiento al proyecto solicitado. El enlace directo de WhatsApp abre su propia aplicación de mensajería y no almacena información en este sitio.",
     "footer.terminosTitulo": "Términos de uso",
     "footer.terminosTexto": "El contenido de este sitio es informativo. Las cotizaciones formales se confirman por escrito según el alcance acordado con cada cliente.",
     "footer.linea": "Urbanismo · Infraestructura · Ingeniería",
-
     "meta.title": "Grupo de Desarrollo Urbano S.A. | Urbanismo, infraestructura e ingeniería",
     "meta.description": "Grupo de Desarrollo Urbano S.A. en Guatemala: urbanismo, infraestructura, construcción, electricidad, tabla yeso, carpintería, herrería, jardinización, rotulación, supervisión e ingeniería civil.",
-
-    "hero.prevImg": "Imagen anterior", "hero.nextImg": "Imagen siguiente",
-    "modal.cerrar": "Cerrar", "modal.anterior": "Proyecto anterior", "modal.siguiente": "Proyecto siguiente",
-    "modal.ubicacion": "Ubicación", "modal.anio": "Año", "modal.area": "Área", "modal.alcance": "Alcance", "modal.rol": "Rol",
+    "hero.prevImg": "Imagen anterior",
+    "hero.nextImg": "Imagen siguiente",
+    "modal.cerrar": "Cerrar",
+    "modal.anterior": "Proyecto anterior",
+    "modal.siguiente": "Proyecto siguiente",
+    "modal.ubicacion": "Ubicación",
+    "modal.anio": "Año",
+    "modal.area": "Área",
+    "modal.alcance": "Alcance",
+    "modal.rol": "Rol",
     "work.trabajoRealizado": "Trabajo realizado",
-    "hero.rot.1.title": "Urban planning and territorial planning", "hero.rot.1.meta": "Land use, master plans and territorial planning",
-    "hero.rot.2.title": "Infrastructure and civil works", "hero.rot.2.meta": "Roadways, hydraulic systems and buildings",
-    "hero.rot.3.title": "Electrical", "hero.rot.3.meta": "Residential, commercial and industrial electrical installations",
-    "hero.rot.4.title": "Landscaping", "hero.rot.4.meta": "Landscaping and green areas that add value to every project",
-    "hero.rot.5.title": "Drywall", "hero.rot.5.meta": "Walls, partitions, suspended ceilings and architectural details",
-    "hero.rot.6.title": "Ironwork", "hero.rot.6.meta": "Custom structures, balconies, stairs and metal elements",
-    "hero.rot.7.title": "Carpentry", "hero.rot.7.meta": "Furniture, kitchens, cladding and custom pieces",
-    "hero.rot.8.title": "Signage", "hero.rot.8.meta": "Signs, dimensional letters, illuminated and non-illuminated signage",
-    "hero.rot.9.title": "Project supervision and management", "hero.rot.9.meta": "Quality control and technical, financial and execution monitoring",
-    "hero.rot.10.title": "Civil engineering and consulting", "hero.rot.10.meta": "Structural, hydraulic, sanitary, electrical and environmental solutions",
-    "hero.rot.11.title": "Environmental management and sustainability", "hero.rot.11.meta": "Impact studies, mitigation, compliance and sustainable solutions"
+    "hero.rot.1.title": "Urbanismo y planificación territorial",
+    "hero.rot.1.meta": "Estudios de uso de suelo, planes maestros y ordenamiento territorial",
+    "hero.rot.2.title": "Infraestructura y obra civil",
+    "hero.rot.2.meta": "Obras viales, sistemas hidráulicos y edificaciones",
+    "hero.rot.3.title": "Electricidad",
+    "hero.rot.3.meta": "Instalaciones eléctricas domiciliares, residenciales, comerciales e industriales",
+    "hero.rot.4.title": "Jardinización",
+    "hero.rot.4.meta": "Paisajismo y áreas verdes que valorizan cada proyecto",
+    "hero.rot.5.title": "Tabla yeso",
+    "hero.rot.5.meta": "Muros, divisiones, cielos falsos y detalles arquitectónicos",
+    "hero.rot.6.title": "Herrería",
+    "hero.rot.6.meta": "Estructuras, balcones, gradas y elementos metálicos a medida",
+    "hero.rot.7.title": "Carpintería",
+    "hero.rot.7.meta": "Mobiliario, cocinas, revestimientos y piezas a medida",
+    "hero.rot.8.title": "Rotulación",
+    "hero.rot.8.meta": "Rótulos, letras corpóreas, señalización luminosa y no luminosa",
+    "hero.rot.9.title": "Supervisión y gerencia de proyectos",
+    "hero.rot.9.meta": "Control de calidad y seguimiento técnico, financiero y de ejecución",
+    "hero.rot.10.title": "Ingeniería civil y consultoría",
+    "hero.rot.10.meta": "Soluciones estructurales, hidráulicas, sanitarias, eléctricas y ambientales",
+    "hero.rot.11.title": "Gestión ambiental y sostenibilidad",
+    "hero.rot.11.meta": "Estudios de impacto, mitigación, cumplimiento y soluciones sostenibles"
+  },
+  "en": {
+    "a11y.skip": "Skip to content",
+    "nav.nosotros": "About",
+    "nav.servicios": "Services",
+    "nav.proyectos": "Projects",
+    "nav.urbanismo": "Urban planning",
+    "nav.preguntas": "FAQ",
+    "nav.contacto": "Contact",
+    "nav.cta": "Free quote",
+    "hero.eyebrow": "Urban Planning · Infrastructure · Engineering",
+    "hero.h1": "We plan territory.<br><span>We build development.</span>",
+    "hero.lead": "End-to-end solutions for urban, residential and commercial projects, from planning through execution and supervision.",
+    "hero.ctaPrimary": "Request a free quote",
+    "hero.destacadaKicker": "Featured area",
+    "chip.urbanismo": "Urban planning",
+    "chip.electricidad": "Electrical",
+    "chip.jardinizacion": "Landscaping",
+    "chip.tablayeso": "Drywall",
+    "chip.herreria": "Ironwork",
+    "chip.carpinteria": "Carpentry",
+    "chip.rotulacion": "Signage",
+    "nosotros.eyebrow": "Who we are",
+    "nosotros.h2": "Technical knowledge, creativity and execution for every project.",
+    "nosotros.lead": "We are a multidisciplinary group of professionals, combining technical knowledge and creativity to develop projects that respond to each client's vision and needs.",
+    "nosotros.p1": "We work on residential, commercial, industrial and institutional buildings. We carry out civil works across its different branches and specialize in finishes and remodeling, accompanying every project from design and resource and schedule planning through physical execution and final finishes.",
+    "nosotros.v1": "Design",
+    "nosotros.v2": "Planning",
+    "nosotros.v3": "Execution",
+    "nosotros.v4": "Quality",
+    "nosotros.expEyebrow": "What we do",
+    "nosotros.expText": "From design and planning to execution and finishes.",
+    "equipo.kicker": "Brand identity",
+    "equipo.text": "On-site personnel wearing Grupo de Desarrollo Urbano corporate uniforms, reinforcing identity, order and professional presentation.",
+    "presentacion.eyebrow": "Corporate presentation",
+    "presentacion.h3": "Learn about our services, capabilities and projects.",
+    "presentacion.p": "Review the institutional presentation of Grupo de Desarrollo Urbano S.A. with company information, service areas and completed projects.",
+    "presentacion.ver": "View PDF presentation",
+    "presentacion.descargar": "Download presentation · 3 MB",
+    "slogan.main": "We build ideas that become solid, sustainable and successful projects.",
+    "slogan.sub": "We build dreams that last: successful projects for the future.",
+    "servicios.eyebrow": "Capabilities",
+    "servicios.h2": "Comprehensive solutions for every stage of the project.",
+    "servicios.lead": "Coordinated services for urban development, construction, remodeling, supervision and specialized technical support.",
+    "servicios.s1.title": "Urban planning and land management",
+    "servicios.s1.text": "Comprehensive land planning and design through land-use studies, master plans, territorial ordering and urban solutions oriented toward sustainable development.",
+    "servicios.s2.title": "Infrastructure development and construction",
+    "servicios.s2.text": "Design, planning and execution of road works, hydraulic systems and commercial, residential and institutional buildings, guaranteeing quality and efficiency in every project.",
+    "servicios.s3.title": "Electrical",
+    "servicios.s3.text": "At Grupo de Desarrollo Urbano we carry out electrical installations for domestic, residential, commercial and industrial projects, with technical planning and attention to every detail. Entrust your project to a team with experience and a commitment to quality.",
+    "servicios.s4.title": "Landscaping",
+    "servicios.s4.text": "Design, preparation and execution of green areas and landscaping, creating functional and harmonious spaces that complement and add value to every project.",
+    "servicios.s5.title": "Drywall installation",
+    "servicios.s5.text": "Construction of walls, partitions, suspended ceilings and architectural details in lightweight systems, providing versatile solutions for commercial, residential and institutional projects.",
+    "servicios.s6.title": "Ironwork",
+    "servicios.s6.text": "Fabrication and installation of custom structures, balconies, stairs and metal elements, with quality welding and finishes for new construction, remodeling and institutional projects.",
+    "servicios.s7.title": "Carpentry",
+    "servicios.s7.text": "Furniture, kitchens, cladding and custom woodwork for residential, corporate and institutional spaces.",
+    "servicios.s8.title": "Signage",
+    "servicios.s8.text": "Design, fabrication and installation of signs, wayfinding, dimensional letters and visual identity elements for commercial, corporate and institutional spaces, both illuminated and non-illuminated.",
+    "servicios.s9.title": "Project supervision and management",
+    "servicios.s9.text": "Comprehensive project administration and supervision with quality control and technical, financial and execution monitoring to ensure compliance with schedules, costs and objectives.",
+    "servicios.s10.title": "Civil engineering and technical consulting",
+    "servicios.s10.text": "Development of studies, designs and structural, hydraulic, sanitary, electrical and environmental engineering solutions tailored to the specific requirements of each project.",
+    "servicios.s11.title": "Environmental management and sustainability",
+    "servicios.s11.text": "Preparation of environmental impact studies, mitigation plans, regulatory compliance and sustainable solutions to promote projects that are responsible toward their surroundings.",
+    "especialidades.eyebrow": "Work in the field",
+    "especialidades.h2": "Work completed by specialty.",
+    "especialidades.lead": "A sample of electrical, drywall, ironwork, carpentry, landscaping and signage work carried out across different projects.",
+    "filter.electricidad": "Electrical",
+    "filter.tablayeso": "Drywall",
+    "filter.herreria": "Ironwork",
+    "filter.carpinteria": "Carpentry",
+    "filter.jardinizacion": "Landscaping",
+    "filter.rotulacion": "Signage",
+    "filter.todos": "All",
+    "filter.urbanismo": "Urban planning",
+    "filter.residencial": "Residential",
+    "filter.comercial": "Commercial",
+    "filter.institucional": "Institutional",
+    "filter.especialidades": "Specialties",
+    "proyectos.eyebrow": "Portfolio",
+    "proyectos.h2": "Projects that back up our experience.",
+    "proyectos.lead": "Urban planning, infrastructure, housing, institutional work, finishes and technical specialty projects. We build dreams that last: successful projects for the future.",
+    "proyectos.note": "Select a project to view its details",
+    "urbanismo.eyebrow": "Urban planning and development",
+    "urbanismo.h2": "From territory to a viable, orderly and sustainable project.",
+    "urbanismo.p": "We combine land-use studies, master plans, territorial ordering, urban design and infrastructure to turn territory into functional, executable projects.",
+    "urbanismo.l1": "Territorial planning and urban design",
+    "urbanismo.l2": "Infrastructure and technical coordination",
+    "urbanismo.l3": "Project supervision and management",
+    "urbanismo.l4": "Environmental management and sustainability",
+    "urbanismo.badgeEyebrow": "Vision",
+    "urbanismo.badgeText": "Plan with judgment.<br>Build with purpose.",
+    "proceso.eyebrow": "Methodology",
+    "proceso.h2": "A clear process from start to finish.",
+    "proceso.lead": "Organization and technical follow-up to keep scope, timelines, coordination and quality on track throughout the project.",
+    "proceso.p1.title": "Diagnosis",
+    "proceso.p1.text": "Needs, conditions, scope, objectives and project requirements.",
+    "proceso.p2.title": "Planning",
+    "proceso.p2.text": "Technical proposal, stages, specialties, timelines and execution strategy.",
+    "proceso.p3.title": "Execution and supervision",
+    "proceso.p3.text": "Field coordination, progress control and activity follow-up.",
+    "proceso.p4.title": "Delivery",
+    "proceso.p4.text": "Close-out, review and support according to the contracted scope.",
+    "credenciales.eyebrow": "Technical backing",
+    "credenciales.h2": "Multidisciplinary coordination for better-supported decisions.",
+    "credenciales.p": "We integrate technical specialties so planning, execution and supervision stay aligned on a single line of work.",
+    "credenciales.c1.title": "Civil engineering and consulting",
+    "credenciales.c1.text": "Structural, hydraulic, sanitary, electrical and environmental design.",
+    "credenciales.c2.title": "Supervision and management",
+    "credenciales.c2.text": "Quality control, project management (PM) and technical and financial follow-up.",
+    "credenciales.c3.title": "Environmental management",
+    "credenciales.c3.text": "Environmental impact studies, mitigation, regulatory compliance and green solutions.",
+    "credenciales.link": "Request technical information →",
+    "faq.eyebrow": "Frequently asked questions",
+    "faq.h2": "What people most often ask us about our services.",
+    "faq.q1": "What services does Grupo de Desarrollo Urbano offer?",
+    "faq.a1": "Urban planning and land management, infrastructure and construction, electrical, landscaping, drywall, ironwork, carpentry, signage, project supervision and management, civil engineering and environmental management.",
+    "faq.q2": "Which areas of Guatemala do you work in?",
+    "faq.a2": "Our office is in Guatemala City and we have carried out projects in several departments of the country, including Chimaltenango, Mixco and Escuintla.",
+    "faq.q3": "How do I request a quote?",
+    "faq.a3": "By WhatsApp, by calling our office, or by filling out the contact form. Our goal is to respond within 24 business hours.",
+    "faq.q4": "Do you handle residential, commercial and institutional projects?",
+    "faq.a4": "Yes. We have developed housing, subdivisions, commercial premises and institutional works, including projects at the University of San Carlos of Guatemala, from planning through execution and finishes.",
+    "faq.q5": "Do you provide construction supervision for third-party projects?",
+    "faq.a5": "Yes, we offer project supervision and management with quality control and technical, financial and execution follow-up.",
+    "contacto.eyebrow": "Contact",
+    "contacto.h2": "Let's talk about your next project.",
+    "contacto.lead": "Request a free quote. Our goal is to respond to your request within 24 business hours.",
+    "contacto.llamar": "Call 2360-3424",
+    "contacto.direccion": "Address",
+    "contacto.correo": "Email",
+    "contacto.horario": "Hours",
+    "contacto.horarioTexto": "Monday to Friday · 8:30 a.m. to 5:30 p.m.",
+    "form.eyebrow": "Request information",
+    "form.h3": "Tell us what you need.",
+    "form.nombre": "Name",
+    "form.telefono": "Phone / WhatsApp",
+    "form.tipo": "Project type",
+    "form.opcion0": "Select an option",
+    "form.opcion1": "Urban planning and land management",
+    "form.opcion2": "Infrastructure and construction",
+    "form.opcion3": "Residential project",
+    "form.opcion4": "Commercial project",
+    "form.opcion5": "Interiors and remodeling",
+    "form.opcion6": "Supervision / management",
+    "form.opcion7": "Technical consulting",
+    "form.opcion8": "Other",
+    "form.mensaje": "Message",
+    "form.mensajePlaceholder": "Briefly describe the project",
+    "form.enviar": "Send request",
+    "form.enviarWhatsapp": "Or send it directly via WhatsApp",
+    "form.nota": "Form available 24/7 · Target response within 24 business hours.",
+    "closing.eyebrow": "Next step",
+    "closing.h2": "Let's turn your project into a clear, executable plan.",
+    "closing.cta1": "Free quote",
+    "closing.cta2": "Talk on WhatsApp",
+    "footer.tagline": "In construction, we are your solution. Urban planning, infrastructure and engineering with a comprehensive vision of development.",
+    "footer.navegacion": "Navigation",
+    "footer.presentacion": "Presentation",
+    "footer.contacto": "Contact",
+    "footer.privacidadTitulo": "Privacy notice",
+    "footer.privacidadTexto": "Data submitted through the form is used only to respond to business inquiries and follow up on the requested project. The direct WhatsApp link opens its own messaging app and does not store information on this site.",
+    "footer.terminosTitulo": "Terms of use",
+    "footer.terminosTexto": "The content of this site is informational. Formal quotes are confirmed in writing according to the scope agreed with each client.",
+    "footer.linea": "Urban Planning · Infrastructure · Engineering",
+    "meta.title": "Grupo de Desarrollo Urbano S.A. | Urban planning, infrastructure and engineering",
+    "meta.description": "Grupo de Desarrollo Urbano S.A. in Guatemala: urban planning, infrastructure, construction, electrical, drywall, carpentry, ironwork, landscaping, signage, supervision and civil engineering.",
+    "hero.prevImg": "Previous image",
+    "hero.nextImg": "Next image",
+    "modal.cerrar": "Close",
+    "modal.anterior": "Previous project",
+    "modal.siguiente": "Next project",
+    "modal.ubicacion": "Location",
+    "modal.anio": "Year",
+    "modal.area": "Area",
+    "modal.alcance": "Scope",
+    "modal.rol": "Role",
+    "work.trabajoRealizado": "Completed work",
+    "hero.rot.1.title": "Urban planning and territorial planning",
+    "hero.rot.1.meta": "Land use studies, master plans and territorial planning",
+    "hero.rot.2.title": "Infrastructure and civil works",
+    "hero.rot.2.meta": "Roadways, hydraulic systems and buildings",
+    "hero.rot.3.title": "Electrical",
+    "hero.rot.3.meta": "Domestic, residential, commercial and industrial electrical installations",
+    "hero.rot.4.title": "Landscaping",
+    "hero.rot.4.meta": "Landscaping and green areas that add value to every project",
+    "hero.rot.5.title": "Drywall",
+    "hero.rot.5.meta": "Walls, partitions, suspended ceilings and architectural details",
+    "hero.rot.6.title": "Ironwork",
+    "hero.rot.6.meta": "Custom structures, balconies, stairs and metal elements",
+    "hero.rot.7.title": "Carpentry",
+    "hero.rot.7.meta": "Furniture, kitchens, cladding and custom pieces",
+    "hero.rot.8.title": "Signage",
+    "hero.rot.8.meta": "Signs, dimensional letters, illuminated and non-illuminated signage",
+    "hero.slogan": "We build dreams that endure. Successful projects for the future.",
+    "chip.infraestructura": "Infrastructure and civil works",
+    "chip.supervision": "Project supervision and management",
+    "chip.ingenieria": "Civil engineering and consulting",
+    "chip.ambiental": "Environmental management",
+    "jardinizacionArea.eyebrow": "Specialized area",
+    "jardinizacionArea.h2": "Landscaping that transforms and maintains living spaces.",
+    "jardinizacionArea.lead": "We develop landscaping, green-area maintenance, ornamental pruning, lawns, residential gardens and recreational environments that enhance the image and value of every project.",
+    "jardinizacionArea.cardKicker": "Green areas and landscaping",
+    "jardinizacionArea.cardTitle": "Professional landscaping and maintenance with a polished presentation.",
+    "jardinizacionArea.cardText": "We combine uniformed personnel, landscape design and technical maintenance to keep gardens, lawns, hedges, recreational areas and residential or institutional environments in excellent condition.",
+    "jardinizacionArea.li1": "Design and maintenance of green areas",
+    "jardinizacionArea.li2": "Ornamental pruning, cleaning and visual garden control",
+    "jardinizacionArea.li3": "Residential, recreational and institutional landscaping",
+    "jardinizacionArea.li4": "Professional service with identified personnel and corporate presentation",
+    "jardinizacionArea.cap1": "Ornamental pruning and detailed maintenance",
+    "jardinizacionArea.cap2": "Landscaping integrated into recreational areas",
+    "jardinizacionArea.cap3": "Tropical settings and residential gardens",
+    "jardinizacionArea.cap4": "Lawns, green borders and ongoing maintenance",
+    "tablayesoArea.eyebrow": "Specialized area",
+    "tablayesoArea.h2": "Drywall with design, execution and finishes.",
+    "tablayesoArea.lead": "We build walls, suspended ceilings, niches, integrated lighting and interior drywall finishes for residential, commercial and institutional spaces.",
+    "tablayesoArea.cardKicker": "Construction specialty",
+    "tablayesoArea.cardTitle": "Drywall solutions for modern interiors.",
+    "tablayesoArea.cardText": "We execute partition walls, suspended ceilings, decorative details, niches, integrated lighting and architectural finishes with orderly, clean work and professional presentation by our personnel.",
+    "tablayesoArea.li1": "Partition walls and cladding",
+    "tablayesoArea.li2": "Suspended ceilings, soffits and decorative details",
+    "tablayesoArea.li3": "Finish levels for residential, commercial and institutional spaces",
+    "tablayesoArea.li4": "Integration with lighting, fixed furniture and other specialties",
+    "tablayesoArea.cap1": "Decorative ceiling design",
+    "tablayesoArea.cap2": "Meeting rooms and interior fit-outs",
+    "tablayesoArea.cap3": "Interior finishes and fixed furniture",
+    "tablayesoArea.cap4": "Installation and organization on site",
+    "tablayesoArea.cap5": "Technical work in lightweight systems",
+    "tablayesoArea.cap6": "Finished spaces with integrated lighting",
+    "carpinteriaArea.eyebrow": "Specialized area",
+    "carpinteriaArea.h2": "Custom carpentry for spaces with identity.",
+    "carpinteriaArea.lead": "We design and build kitchens, tables, furniture, paneling, cladding and special wood pieces for residential, corporate and institutional projects.",
+    "carpinteriaArea.cardKicker": "Carpentry and furniture",
+    "carpinteriaArea.cardTitle": "Design, fabrication and installation with quality finishes.",
+    "carpinteriaArea.cardText": "We combine functionality, proportion and detail in custom furniture and wood elements, carefully selecting materials, hardware, installation and final presentation.",
+    "carpinteriaArea.li1": "Kitchens and fixed furniture",
+    "carpinteriaArea.li2": "Tables, special furniture and custom pieces",
+    "carpinteriaArea.li3": "Paneling, cladding and TV furniture",
+    "carpinteriaArea.li4": "Residential, corporate and institutional solutions",
+    "carpinteriaArea.cap1": "Tables and special furniture",
+    "carpinteriaArea.cap2": "Dining furniture and residential pieces",
+    "carpinteriaArea.cap3": "Paneling and entertainment furniture",
+    "carpinteriaArea.cap4": "Furniture for corporate spaces",
+    "rotulacionArea.eyebrow": "Specialized area",
+    "rotulacionArea.h2": "Signage that projects identity and commercial presence.",
+    "rotulacionArea.lead": "We develop signage, wayfinding and dimensional-letter solutions for facades, shopping centers, interiors and institutional spaces, with illuminated and non-illuminated finishes.",
+    "rotulacionArea.cardKicker": "Brand image",
+    "rotulacionArea.cardTitle": "Signs and wayfinding that make your brand visible.",
+    "rotulacionArea.cardText": "We fabricate and install dimensional letters, illuminated signs, directories and technical signage with precision in materials, installation and finish, taking care of both function and visual impact.",
+    "rotulacionArea.li1": "Dimensional letters and illuminated / non-illuminated signs",
+    "rotulacionArea.li2": "Informational, preventive and directional signage",
+    "rotulacionArea.li3": "Commercial facades, directories and spatial branding",
+    "rotulacionArea.li4": "Fabrication, installation and finishes for interior and exterior use",
+    "rotulacionArea.cap1": "Preventive and informational signage",
+    "rotulacionArea.cap2": "Illuminated letters and nighttime identity",
+    "rotulacionArea.cap3": "Commercial facade installation",
+    "rotulacionArea.cap4": "Directories and signage for shopping centers",
+    "rotulacionArea.cap5": "ACM facades and dimensional letters",
+    "hero.rot.9.title": "Project supervision and management",
+    "hero.rot.9.meta": "Quality control and technical, financial and execution monitoring",
+    "hero.rot.10.title": "Civil engineering and consulting",
+    "hero.rot.10.meta": "Structural, hydraulic, sanitary, electrical and environmental solutions",
+    "hero.rot.11.title": "Environmental management and sustainability",
+    "hero.rot.11.meta": "Impact studies, mitigation, compliance and sustainable solutions"
   }
 };
 
-function applyLanguage(lang){
-  document.documentElement.setAttribute("lang", lang);
+// Make the dictionaries explicitly available to app.js and to diagnostics.
+window.translations = translations;
+
+function normalizeLanguage(lang){
+  return lang === "en" ? "en" : "es";
+}
+
+function applyLanguage(requestedLang, persist=false){
+  const lang = normalizeLanguage(requestedLang);
   const dict = translations[lang] || translations.es;
+  document.documentElement.setAttribute("lang", lang);
 
   document.querySelectorAll("[data-i18n]").forEach(el=>{
     const key = el.getAttribute("data-i18n");
-    if(dict[key] !== undefined) el.textContent = dict[key];
+    if(Object.prototype.hasOwnProperty.call(dict,key)) el.textContent = dict[key];
   });
   document.querySelectorAll("[data-i18n-html]").forEach(el=>{
     const key = el.getAttribute("data-i18n-html");
-    if(dict[key] !== undefined) el.innerHTML = dict[key];
+    if(Object.prototype.hasOwnProperty.call(dict,key)) el.innerHTML = dict[key];
   });
   document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{
     const key = el.getAttribute("data-i18n-placeholder");
-    if(dict[key] !== undefined) el.setAttribute("placeholder", dict[key]);
+    if(Object.prototype.hasOwnProperty.call(dict,key)) el.setAttribute("placeholder", dict[key]);
   });
   document.querySelectorAll("[data-i18n-aria]").forEach(el=>{
     const key = el.getAttribute("data-i18n-aria");
-    if(dict[key] !== undefined) el.setAttribute("aria-label", dict[key]);
+    if(Object.prototype.hasOwnProperty.call(dict,key)) el.setAttribute("aria-label", dict[key]);
   });
 
   if(dict["meta.title"]) document.title = dict["meta.title"];
@@ -280,30 +577,45 @@ function applyLanguage(lang){
 
   const toggle = document.getElementById("langToggle");
   if(toggle){
-    toggle.setAttribute("aria-label", lang==="es" ? "Switch to English" : "Cambiar a español");
+    toggle.setAttribute("aria-label", lang === "es" ? "Switch to English" : "Cambiar a español");
+    toggle.setAttribute("title", lang === "es" ? "English" : "Español");
+    toggle.setAttribute("data-current-language", lang);
     const label = toggle.querySelector(".lang-toggle-label");
-    if(label) label.textContent = lang==="es" ? "EN" : "ES";
+    if(label) label.textContent = lang === "es" ? "EN" : "ES";
+  }
+
+  if(persist){
+    try{ localStorage.setItem("gdu-lang", lang); }catch(e){}
   }
 
   document.dispatchEvent(new CustomEvent("gdu:language-changed", {detail:{lang}}));
+  return lang;
 }
 
 function initLanguage(){
-  let lang = "es";
-  try{ lang = localStorage.getItem("gdu-lang") || "es"; }catch(e){}
-  applyLanguage(lang);
+  let lang = document.documentElement.getAttribute("lang") || "es";
+  try{ lang = localStorage.getItem("gdu-lang") || lang; }catch(e){}
+  lang = applyLanguage(lang, false);
 
   const toggle = document.getElementById("langToggle");
-  toggle?.addEventListener("click", ()=>{
-    const current = document.documentElement.getAttribute("lang") === "en" ? "en" : "es";
-    const next = current === "es" ? "en" : "es";
-    try{ localStorage.setItem("gdu-lang", next); }catch(e){}
-    applyLanguage(next);
-  });
+  if(toggle && toggle.dataset.languageBound !== "true"){
+    toggle.dataset.languageBound = "true";
+    toggle.addEventListener("click", (event)=>{
+      event.preventDefault();
+      const current = normalizeLanguage(document.documentElement.getAttribute("lang"));
+      applyLanguage(current === "es" ? "en" : "es", true);
+    });
+  }
 }
 
+window.GDUI18N = {
+  translations,
+  applyLanguage: (lang)=>applyLanguage(lang, true),
+  getLanguage: ()=>normalizeLanguage(document.documentElement.getAttribute("lang"))
+};
+
 if(document.readyState === "loading"){
-  document.addEventListener("DOMContentLoaded", initLanguage);
+  document.addEventListener("DOMContentLoaded", initLanguage, {once:true});
 } else {
   initLanguage();
 }

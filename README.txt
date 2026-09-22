@@ -40,3 +40,5 @@ V18: se confirmó e integró el área de Jardinización con las imágenes adjunt
 
 
 Actualización v19: se corrigió la carga de fotografías en Jardinización. Se generaron miniaturas faltantes para las nuevas imágenes y se agregó respaldo automático a la imagen de tamaño completo si una miniatura no pudiera cargarse.
+
+V20: se corrigió por completo el selector ES/EN. Se restauró el diccionario inglés completo, se corrigieron los textos rotativos que estaban en inglés dentro del diccionario español, se sincronizó el contenido dinámico con el idioma seleccionado y se agregó versionado de scripts para evitar que el navegador use archivos antiguos en caché.
