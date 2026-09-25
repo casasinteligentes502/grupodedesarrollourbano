@@ -167,6 +167,14 @@ section{scroll-margin-top:100px}
 .slogan-main{font-family:var(--font-display);font-size:clamp(28px,4vw,44px);font-style:italic;font-weight:600;line-height:1.28;color:#f7eed9;margin:0;text-wrap:balance}
 .slogan-sub{margin:22px 0 0;font-size:14px;color:#cbb98a;letter-spacing:.02em}
 
+/* V21 · SLOGAN INTEGRADO EN SERVICIOS */
+.services-slogan-banner{margin:38px 0 44px;padding:46px 30px 34px;border-radius:16px;border:1px solid rgba(199,164,91,.28);box-shadow:0 20px 55px rgba(17,18,20,.14)}
+.services-slogan-banner::before{border-radius:16px}
+.services-slogan-banner .slogan-inner{position:relative;z-index:2}
+.services-slogan-banner .slogan-main{max-width:940px;margin:0 auto;color:#f7eed9}
+.services-slogan-logo{display:block;width:min(260px,58vw);height:auto;margin:26px auto 0;opacity:.9;filter:drop-shadow(0 16px 30px rgba(0,0,0,.28))}
+.services-slogan-banner .slogan-sub{margin-top:18px}
+
 /* SPECIALTY */
 .specialty-section{padding-top:84px}
 .specialty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -550,4 +558,11 @@ a.social-icon:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(17,18
   .brand-copy span{font-size:14px}
   .modal-gallery{padding:8px 12px 0}
   .modal-gallery button{flex-basis:72px;height:54px}
+}
+
+@media (max-width:620px){
+  .services-slogan-banner{margin:30px 0 34px;padding:36px 18px 28px;border-radius:12px}
+  .services-slogan-banner::before{border-radius:12px}
+  .services-slogan-logo{width:min(210px,64vw);margin-top:22px}
+  .services-slogan-banner .slogan-main{font-size:clamp(27px,8.4vw,36px)}
 }
