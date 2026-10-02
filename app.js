@@ -8,9 +8,8 @@ function currentLang(){
   return document.documentElement.getAttribute("lang") === "en" ? "en" : "es";
 }
 function t(key){
-  const table = window.translations || (typeof translations !== "undefined" ? translations : null);
-  const dict = (table && (table[currentLang()] || table.es)) || {};
-  return Object.prototype.hasOwnProperty.call(dict,key) ? dict[key] : key;
+  const dict = (window.translations && window.translations[currentLang()]) || {};
+  return dict[key] !== undefined ? dict[key] : key;
 }
 
 const toThumb = path => path.replace("assets/", "assets/thumbs/");
@@ -522,20 +521,15 @@ function buildWhatsappMessage(){
        tipo && `Tipo de proyecto: ${tipo}`, mensaje && `Mensaje: ${mensaje}`];
   return lines.filter(Boolean).join("\n");
 }
-formWhatsappBtn?.addEventListener("click", ()=>{
+function sendProjectToWhatsapp(event){
+  event?.preventDefault();
+  if(!leadForm || !leadForm.reportValidity()) return;
   const text = encodeURIComponent(buildWhatsappMessage());
-  window.open(`https://wa.me/50236498783?text=${text}`, "_blank", "noopener");
-});
-
-/* Form fallback for local testing; on Netlify the form posts via Netlify Forms. */
-leadForm?.addEventListener("submit",e=>{
-  if(location.protocol!=="file:") return;
-  e.preventDefault();
-  const data=new FormData(leadForm);
-  const subject=encodeURIComponent("Solicitud de información - Grupo de Desarrollo Urbano");
-  const body=encodeURIComponent(`Nombre: ${data.get("nombre")}\nTeléfono: ${data.get("telefono")}\nTipo de proyecto: ${data.get("tipo-proyecto")}\n\nMensaje:\n${data.get("mensaje")||""}`);
-  window.location.href=`mailto:Grupodedesarrollourbanosa@gmail.com?subject=${subject}&body=${body}`;
-});
+  // Same-tab navigation avoids popup blockers and works on mobile and desktop.
+  window.location.assign(`https://wa.me/50236498783?text=${text}`);
+}
+formWhatsappBtn?.addEventListener("click", sendProjectToWhatsapp);
+leadForm?.addEventListener("submit", sendProjectToWhatsapp);
 
 const year=document.getElementById("year");
 if(year) year.textContent=new Date().getFullYear();
