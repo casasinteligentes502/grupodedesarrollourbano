@@ -34,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=24" />
   <link rel="preload" as="image" href="assets/mobile/gdu-proyecto-casa-playa.webp" imagesrcset="assets/mobile/gdu-proyecto-casa-playa.webp 800w, assets/gdu-proyecto-casa-playa.webp 1440w" imagesizes="100vw" fetchpriority="high" />
   <link rel="alternate" type="application/pdf" href="assets/Presentacion-Grupo-Desarrollo-Urbano.pdf" title="Presentación corporativa Grupo de Desarrollo Urbano S.A." />
   <script type="application/ld+json">
@@ -254,7 +254,7 @@
           <p data-i18n="presentacion.p">Consulte la presentación institucional de Grupo de Desarrollo Urbano S.A. con información de la empresa, áreas de servicio y proyectos realizados.</p>
           <div class="presentation-actions">
             <a class="btn btn-primary" href="assets/Presentacion-Grupo-Desarrollo-Urbano.pdf" target="_blank" rel="noopener" data-i18n="presentacion.ver">Ver presentación PDF</a>
-            <a class="btn btn-secondary" href="assets/Presentacion-Grupo-Desarrollo-Urbano.pdf" download data-i18n="presentacion.descargar">Descargar presentación · 3 MB</a>
+            <a class="btn btn-secondary" href="assets/Presentacion-Grupo-Desarrollo-Urbano.pdf" type="application/pdf" download="Presentacion-Grupo-Desarrollo-Urbano.pdf" aria-label="Descargar presentación corporativa PDF optimizada" data-i18n="presentacion.descargar">Descargar presentación · 5.7 MB</a>
           </div>
         </div>
       </div>
@@ -268,6 +268,14 @@
             <h2 data-i18n="servicios.h2">Soluciones integrales para cada etapa del proyecto.</h2>
           </div>
           <p data-i18n="servicios.lead">Servicios coordinados para desarrollo urbano, construcción, adecuaciones, supervisión y soporte técnico especializado.</p>
+        </div>
+
+        <div class="slogan-banner services-slogan-banner reveal" aria-label="Filosofía de trabajo">
+          <div class="slogan-inner">
+            <p class="slogan-main" data-i18n="slogan.main">Construimos ideas que se transforman en proyectos sólidos, sostenibles y exitosos.</p>
+            <img class="services-slogan-logo" src="assets/logo-gdu-mark-transparent.webp" width="780" height="515" alt="Símbolo de Grupo de Desarrollo Urbano" loading="lazy" decoding="async" />
+            <p class="slogan-sub" data-i18n="slogan.sub">Construimos sueños que perduren: proyectos exitosos para el futuro.</p>
+          </div>
         </div>
 
         <div class="services-grid">
@@ -316,14 +324,6 @@
             <h3 data-i18n="servicios.s11.title">Gestión ambiental y sostenibilidad</h3><p data-i18n="servicios.s11.text">Elaboración de estudios de impacto ambiental, planes de mitigación, cumplimiento normativo y soluciones sostenibles para promover proyectos responsables con su entorno.</p>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section class="slogan-banner" aria-label="Filosofía de trabajo">
-      <img class="slogan-watermark" src="assets/logo-gdu-mark-transparent.webp" width="780" height="515" alt="" aria-hidden="true" loading="lazy" decoding="async" />
-      <div class="slogan-inner reveal">
-        <p class="slogan-main" data-i18n="slogan.main">Construimos ideas que se transforman en proyectos sólidos, sostenibles y exitosos.</p>
-        <p class="slogan-sub" data-i18n="slogan.sub">Construimos sueños que perduren: proyectos exitosos para el futuro.</p>
       </div>
     </section>
 
@@ -711,7 +711,9 @@
           </div>
         </div>
 
-        <form class="lead-form reveal reveal-delay-1" id="leadForm" name="contacto-proyecto" method="GET" action="https://wa.me/50236498783">
+        <form class="lead-form reveal reveal-delay-1" id="leadForm" name="contacto-proyecto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?enviado=1#contacto">
+          <input type="hidden" name="form-name" value="contacto-proyecto" />
+          <p class="sr-only"><label>No llenar <input name="bot-field" /></label></p>
           <div class="form-heading">
             <span class="eyebrow" data-i18n="form.eyebrow">Solicitar información</span>
             <h3 data-i18n="form.h3">Cuéntenos qué necesita.</h3>
@@ -736,7 +738,7 @@
           <div class="form-whatsapp-row">
             <button class="btn btn-whatsapp-outline" type="button" id="formWhatsappBtn" data-i18n="form.enviarWhatsapp">O envíelo directo por WhatsApp</button>
           </div>
-          <p class="form-note" data-i18n="form.nota">Se abrirá WhatsApp con los datos de su solicitud. Presione Enviar en WhatsApp para completar el envío.</p>
+          <p class="form-note" data-i18n="form.nota">Formulario disponible 24/7 · Respuesta objetivo en 24 horas hábiles.</p>
         </form>
       </div>
     </section>
@@ -807,7 +809,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-  <script src="i18n.js?v=contacto-whatsapp-20261002" defer></script>
-  <script src="app.js?v=contacto-whatsapp-20261002" defer></script>
+  <script src="i18n.js?v=24" defer></script>
+  <script src="app.js?v=24" defer></script>
 </body>
 </html>

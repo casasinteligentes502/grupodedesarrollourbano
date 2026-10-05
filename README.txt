@@ -41,9 +41,21 @@ V18: se confirmó e integró el área de Jardinización con las imágenes adjunt
 
 Actualización v19: se corrigió la carga de fotografías en Jardinización. Se generaron miniaturas faltantes para las nuevas imágenes y se agregó respaldo automático a la imagen de tamaño completo si una miniatura no pudiera cargarse.
 
+V20: se corrigió por completo el selector ES/EN. Se restauró el diccionario inglés completo, se corrigieron los textos rotativos que estaban en inglés dentro del diccionario español, se sincronizó el contenido dinámico con el idioma seleccionado y se agregó versionado de scripts para evitar que el navegador use archivos antiguos en caché.
 
-CORRECCIÓN CONTACTO — 2 OCTUBRE 2026
-Enviar solicitud y el botón alternativo abren WhatsApp +502 3649 8783 con nombre, teléfono, tipo de proyecto y mensaje. Los campos obligatorios se validan. El visitante debe presionar Enviar dentro de WhatsApp. No se realiza POST ni se depende de Netlify Forms.
 
-INSTALACIÓN DE ESTA ACTUALIZACIÓN
-Copie los archivos de este ZIP en su carpeta ORIGINAL del sitio, reemplazando los correspondientes. CONSERVE la carpeta assets y los demás recursos existentes: las imágenes y el PDF no estaban incluidos en los archivos recibidos. Publique la carpeta completa combinada, no este ZIP por sí solo como sitio nuevo.
+V21: se reubicó el slogan “Construimos ideas que se transforman en proyectos sólidos, sostenibles y exitosos.” inmediatamente después del encabezado “Soluciones integrales para cada etapa del proyecto.” y se colocó visualmente encima del logo de Grupo de Desarrollo Urbano, manteniendo la traducción ES/EN.
+
+
+V22 FINAL CORREGIDA
+- Incluye todos los cambios de la V21.
+- Se reemplazó la presentación PDF por la última versión optimizada para GitHub (~5.8 MB), manteniendo el nombre esperado por la página: Presentacion-Grupo-Desarrollo-Urbano.pdf.
+
+
+V24 - PRESENTACION OPTIMIZADA Y VERIFICADA
+- Se verificó la presentación final adjunta de 32 páginas contra la versión web optimizada.
+- La presentación original de aproximadamente 50 MB fue sustituida por una versión visualmente equivalente de aproximadamente 5.7 MB.
+- El PDF quedó optimizado para visualización progresiva (Fast Web View), mejorando apertura en computadora y teléfono.
+- Se mantuvo el nombre assets/Presentacion-Grupo-Desarrollo-Urbano.pdf para no romper enlaces existentes.
+- Se actualizó el botón de descarga para usar un nombre de archivo explícito y el texto de tamaño real aproximado.
+- Se actualizó el versionado de CSS/JS a v24 para evitar caché antigua.
