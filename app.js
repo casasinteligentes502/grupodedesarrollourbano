@@ -527,14 +527,12 @@ formWhatsappBtn?.addEventListener("click", ()=>{
   window.open(`https://wa.me/50236498783?text=${text}`, "_blank", "noopener");
 });
 
-/* Form fallback for local testing; on Netlify the form posts via Netlify Forms. */
+/* Contact form: static-host safe. Always routes the request to WhatsApp.
+   This avoids POST/405 errors on GitHub Pages, custom static hosting and Netlify. */
 leadForm?.addEventListener("submit",e=>{
-  if(location.protocol!=="file:") return;
   e.preventDefault();
-  const data=new FormData(leadForm);
-  const subject=encodeURIComponent("Solicitud de información - Grupo de Desarrollo Urbano");
-  const body=encodeURIComponent(`Nombre: ${data.get("nombre")}\nTeléfono: ${data.get("telefono")}\nTipo de proyecto: ${data.get("tipo-proyecto")}\n\nMensaje:\n${data.get("mensaje")||""}`);
-  window.location.href=`mailto:Grupodedesarrollourbanosa@gmail.com?subject=${subject}&body=${body}`;
+  const text = encodeURIComponent(buildWhatsappMessage());
+  window.location.href = `https://wa.me/50236498783?text=${text}`;
 });
 
 const year=document.getElementById("year");
